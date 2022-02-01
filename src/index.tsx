@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
+import { ConfigProvider } from 'antd';
+
+ConfigProvider.config({
+    theme: {
+        primaryColor: '#25b864',
+    },
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <ConfigProvider>
+        <App />
+     </ConfigProvider>,
   document.getElementById('root')
 );
 
